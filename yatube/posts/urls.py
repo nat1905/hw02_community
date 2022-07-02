@@ -1,4 +1,5 @@
-# posts/urls.py
+"""Urls for app posts.
+"""
 from django.urls import path
 
 from . import views

@@ -1,6 +1,6 @@
 {% load static %}
-<!DOCTYPE html> <!-- Используется html 5 версии -->
-<html lang="ru"> <!-- Язык сайта - русский -->
+<!DOCTYPE html> 
+<html lang="ru">
   <head>    
     {% include 'includes/head.html' %}
     <title>{% block title %}Title{% endblock %}</title>
@@ -10,7 +10,6 @@
       {% include 'includes/header.html' %}
     </header>
     <main>
-      <!-- класс py-5 создает отступы сверху и снизу блока -->
       <div class="container py-5"> 
       {% block content %}
         Контент не подвезли :(

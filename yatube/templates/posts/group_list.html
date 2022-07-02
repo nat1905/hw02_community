@@ -1,4 +1,4 @@
-<!-- templates/posts/group_list.html --> 
+<!-- templates/posts/group_list.html -->
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}{{ title }}{% endblock %}
@@ -11,15 +11,7 @@
             {{ group.description }}
         </p>
 {% for post in posts %}
-<ul>
-    <li>
-    Автор: {{ post.author.get_full_name }}
-    </li>
-    <li>
-    Дата публикации: {{ post.pub_date|date:"d E Y" }}
-    </li>
-</ul>
-<p>{{ post.text }}</p>
+{% include 'includes/author_date_post.html' %} 
 {% if not forloop.last %}<hr>{% endif %}
 {% endfor %}
 {% endblock %}  
