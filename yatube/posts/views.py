@@ -12,7 +12,7 @@ POST_LIMIT = 10
 def index(request):
     template = 'posts/index.html'
     title = 'Последние обновления на сайте.'
-    posts = Post.objects.all()[:POST_LIMIT]    
+    posts = Post.objects.all()[:POST_LIMIT]
     context = {
         'title': title,
         'posts': posts,
