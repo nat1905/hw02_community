@@ -25,8 +25,7 @@ def group_posts(request, slug):
     template = 'posts/group_list.html'
     title = f'Записи сообщества {get_object_or_404(Group, slug=slug)}'
     group = get_object_or_404(Group, slug=slug)
-    # posts = Post.objects.filter(group=group)[:POST_LIMIT]
-    posts = group.posts.all()
+    posts = group.posts.all()[:POST_LIMIT]
     context = {
         'title': title,
         'group': group,
